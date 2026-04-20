@@ -1,0 +1,63 @@
+:root {
+    --verde: #1D9E75;
+    --rojo:  #E24B4A;
+    --fondo: #F4F4F2;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: var(--fondo);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+  }
+
+  .pantalla {
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .numero {
+    font-size: 96px;
+    font-variant-numeric: tabular-nums;
+    transition: transform 0.1s ease, color 0.2s ease;
+  }
+  
+  .numero.animar-subir {
+    transform: scale(1.1);
+    color: var(--verde);
+  }
+
+  .estado {
+    border-radius: 99px;
+    background: #E1F5EE;
+    color: var(--verde-oscuro);
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .estado.casi-lleno { background: #FAEEDA; color: #854F0B; }
+  .estado.lleno      { background: #FCEBEB; color: #A32D2D; }
+
+  .boton-grande:active {
+    transform: scale(0.95);
+    opacity: 0.85;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .panel-capacidad,
+.panel-historial {
+  display: none;
+}
+
+.panel-capacidad.visible,
+.panel-historial.visible {
+  display: block;
+}

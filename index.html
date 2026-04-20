@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1D9E75">
+    <meta name="description" content="Contador de personas para salón">
+
+    <title>Contador de Salón</title>
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" href="icon-192.png">
+  </head>
+
+  <body>
+
+    <div class="pantalla">
+
+      <p class="etiqueta-titulo">CONTADOR DE SALÓN</p>
+
+      <div class="caja-numero">
+        <p class="etiqueta-pequeña">Personas adentro</p>
+        <p class="numero" id="numero">0</p>
+        <p class="estado" id="estado">Vacío</p>
+      </div>
+
+      <div class="barra-contenedor">
+        <div class="barra-fondo">
+          <div class="barra-relleno" id="barra"></div>
+        </div>
+        <p class="barra-texto" id="barra-texto">0 / 100</p>
+      </div>
+
+      <button class="boton-grande boton-verde" id="boton-entrar">
+        + ENTRA
+      </button>
+
+      <button class="boton-grande boton-gris" id="boton-salir">
+        − SALE
+      </button>
+
+      <div class="fila-botones">
+        <button class="boton-chico" id="boton-capacidad">⚙ Capacidad</button>
+        <button class="boton-chico" id="boton-historial">📋 Historial</button>
+        <button class="boton-chico boton-rojo" id="boton-reiniciar">↺ Reiniciar</button>
+      </div>
+
+      <div class="panel-capacidad" id="panel-capacidad">
+        <p class="etiqueta-pequeña">Máximo de personas</p>
+        <input type="range" min="10" max="500" step="10" value="100" id="slider-capacidad">
+        <p class="valor-slider" id="valor-slider">100 personas</p>
+      </div>
+
+      <div class="panel-historial" id="panel-historial">
+        <div id="lista-historial"></div>
+      </div>
+
+    </div>
+
+    <script src="app.js"></script>
+
+  </body>
+
+</html>
