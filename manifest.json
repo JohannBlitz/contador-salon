@@ -2,7 +2,7 @@
     "name": "Contador de Salón",
     "short_name": "Contador",
     "description": "Contador de personas para salón o eventos",
-    "start_url": "/",
+    "start_url": "/contador-salon/",
     "display": "standalone",
     "orientation": "portrait",
     "background_color": "#F4F4F2",
